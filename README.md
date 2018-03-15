@@ -1,6 +1,23 @@
 # Space-Digital-Image
 Our Group Project
 
+function makeBackground() {
+  penColor("#001133");
+  dot(2400);
+  penUp();
+}
+
+// draws all of the diamond stars
+function drawAllStars(amount) {
+  for (var i = 0; i < amount; i++) {
+    penUp();
+    moveTo(randomNumber(20,300),randomNumber(30,400));
+    penDown();
+    drawStar1(randomNumber(5,25));
+    penUp();
+  }
+}
+
 //Draw one snowflake-type star
 function drawStar3(size) {
   penDown();
@@ -23,12 +40,49 @@ function drawStar3(size) {
   penUp();
 }
 
+// draws a singular diamond star
+function drawStar1(size) {
+  penRGB(randomNumber(204,255),randomNumber(153,255),randomNumber(0,255));
+  turnTo(45);
+  drawStarSide(size);
+  turnTo(165);
+  drawStarSide(size);
+  turnTo(225);
+  drawStarSide(size);
+  turnTo(345);
+  drawStarSide(size);
+}
+
 //draw all the snowflake-type stars
 function drawAllStars3() {
   for (var i = 0; i < 20; i++) {
     moveTo(randomNumber(0, 320), randomNumber(0, 450));
     drawStar3 (randomNumber(5, 15));
   }
+}
+
+// draws side of diamond star
+function drawStarSide(size) {
+  penWidth(2);
+  arcLeft(size,size);
+}
+
+// draws first planet
+function drawPlanet() {
+  penUp();
+  moveTo(170,380);
+  penDown();
+  penRGB(150,150,0,1.0);
+  dot(53);
+  moveTo(144,339);
+  penRGB(130,180,0,1.0);
+  turnTo(145);
+  penWidth(10);
+  arcLeft(30,180);
+  moveTo(125,363);
+  turnTo(145);
+  arcLeft(30,178);
+  penUp();
 }
 
 //Draw the Third Planet Type
@@ -76,5 +130,45 @@ for (var i = 0; i < 2; i++) {
   dot(60);
   moveForward(23);
   dot(60);
+  penUp();
+}
+
+// draws sun
+function drawSun() {
+  penUp();
+  moveTo(10,15);
+  penColor("yellow");
+  dot(50);
+  penUp();
+  drawAllSunrays();
+}
+
+// draws the rays of the sun
+function drawAllSunrays() {
+  turnTo(0);
+  penWidth(2);
+  moveTo(0,80);
+  penDown();
+  arcRight(160,10);
+  turnTo(0);
+  arcRight(160,10);
+  turnTo(-25);
+  arcRight(160,10);
+  turnTo(-45);
+  arcRight(160,10);
+  turnTo(-65);
+  arcRight(160,10);
+  turnTo(-75);
+  arcRight(160,10);
+  turnTo(-95);
+  arcRight(160,10);
+  penUp();
+}
+
+//draws spaceship window
+function drawWindow() {
+  moveTo(160,240);
+  penRGB(0,0,255,0.2);
+  dot(50);
   penUp();
 }
