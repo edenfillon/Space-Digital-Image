@@ -1,20 +1,20 @@
 # Space-Digital-Image
 Our Group Project
-
 //calls for functions
-hide();
 makeBackground();
 drawAllStars(10);
-drawAllStars2(5);
+drawAllStars2();
 drawAllStars3();
 drawAllPlanets();
 drawMeteor();
 drawSun();
 drawAllSunrays();
+turnTo(90);
 drawAlien();
 drawWindow();
 drawRocketshipBody(230, 310);
 drawAlienFace();
+hide(); 
 
 //make background
 function makeBackground() {
@@ -253,7 +253,7 @@ function drawRocketshipBody(Xlocation, Ylocation) {
 
 //draws spaceship window
 function drawWindow() {
-  moveTo(160,250);
+  moveTo(160,240);
   penRGB(0,0,255,0.2);
   dot(50);
   penUp();
