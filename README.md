@@ -3,9 +3,7 @@ Our Group Project
 
 //calls for functions
 makeBackground();
-drawAllPlanets
-drawPlanet();
-drawPlanet3(60, 65, 0, 20);
+drawAllPlanets();
 drawMeteor();
 drawSun();
 drawAllSunrays();
@@ -20,9 +18,9 @@ function makeBackground() {
 }
 
 function drawAllPlanets() {
-  drawPlanet
-  drawPlanet2
-  drawPlanet3
+  drawPlanet();
+  drawPlanet2();
+  drawPlanet3(60, 65, 0, 20);
 }
 
 // draws all of the diamond stars
