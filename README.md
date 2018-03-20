@@ -3,6 +3,8 @@ Our Group Project
 
 //calls for functions
 makeBackground();
+drawAllStars(10);
+drawAllStars3();
 drawAllPlanets();
 drawMeteor();
 drawSun();
@@ -11,6 +13,7 @@ drawAlien();
 drawWindow();
 drawRocketshipBody(230, 278);
 drawAlienFace();
+
 //make background
 function makeBackground() {
   penColor("#001133");
@@ -243,7 +246,6 @@ function drawRocketshipBody(Xlocation, Ylocation) {
   turnRight();
   penWidth(19);
   moveForward(80);
-  penUp();
 }
 
 //draws spaceship window
