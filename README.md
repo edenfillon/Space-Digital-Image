@@ -1,6 +1,19 @@
 # Space-Digital-Image
 Our Group Project
 
+//calls for functions
+makeBackground();
+drawAllStars();
+drawAllStars3();
+drawPlanet();
+drawPlanet3(60, 65, 0, 20);
+drawMeteor();
+drawSun();
+drawAllSunrays();
+drawWindow();
+drawRocketshipBody(230, 278);
+
+//make background
 function makeBackground() {
   penColor("#001133");
   dot(2400);
@@ -100,7 +113,7 @@ function drawPlanet3(size, red, green, blue) {
 
 //draw a meteor
 function drawMeteor() {
-  moveTo(149, 20);
+  moveTo(260, 60);
   penDown();
   penColor("#606060");
 for (var i = 0; i < 4; i++) {
@@ -163,6 +176,44 @@ function drawAllSunrays() {
   turnTo(-95);
   arcRight(160,10);
   penUp();
+}
+
+//draws the Rocketship Body
+function drawRocketshipBody(Xlocation, Ylocation) {
+  moveTo(Xlocation, Ylocation);
+  turnTo(-30);
+  penDown();
+  penWidth(10);
+  penColor("#660000");
+  arcLeft(110, 90);
+  turnLeft(70);
+  arcLeft(110, 90);
+  turnTo(270);
+  moveForward();
+  dot(20);
+  penWidth(38);
+  moveForward(95);
+  turnTo(0);
+  penWidth(25);
+  moveForward(27.5);
+  turnRight();
+  moveForward(83);
+  arcRight(180, 5);
+  penWidth(13);
+  moveForward(100);
+  turnTo(180);
+  moveForward(3);
+  arcLeft(90, 10);
+  moveForward(5);
+  turnRight(90);
+  moveForward(19);
+  turnLeft(90);
+  moveForward(90);
+  turnRight(90);
+  moveForward(3);
+  turnRight();
+  penWidth(19);
+  moveForward(80);
 }
 
 //draws spaceship window
