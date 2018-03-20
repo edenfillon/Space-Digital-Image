@@ -7,9 +7,10 @@ drawAllPlanets();
 drawMeteor();
 drawSun();
 drawAllSunrays();
+drawAlien();
 drawWindow();
-drawRocketshipBody(230, 310);
-
+drawRocketshipBody(230, 278);
+drawAlienFace();
 //make background
 function makeBackground() {
   penColor("#001133");
@@ -34,6 +35,16 @@ function drawAllStars(amount) {
   }
 }
 
+function drawAllStars2 (){
+for(var i = 0; i < randomNumber(5,15); i++){
+  penUp();
+moveTo(randomNumber(10,300),randomNumber(400,0));
+penDown();
+drawStar2(randomNumber(5,10),randomNumber(204,256),randomNumber(153,256),randomNumber(0,255));
+penUp();
+ }
+} 
+
 //Draw one snowflake-type star
 function drawStar3(size) {
   penDown();
@@ -55,7 +66,15 @@ function drawStar3(size) {
   }
   penUp();
 }
-
+//Draws Cris Crossy Star
+function drawStar2(size){
+  penRGB(randomNumber(204,255),randomNumber(153,255),randomNumber(0,255),1);
+  for(var i = 0; i < 5; i++){
+    moveForward(size);
+    turnRight(145);
+  }
+  turnTo(90);
+}
 // draws a singular diamond star
 function drawStar1(size) {
   penRGB(randomNumber(204,255),randomNumber(153,255),randomNumber(0,255));
@@ -91,7 +110,7 @@ function drawPlanet() {
   penRGB(150,150,0,1.0);
   dot(53);
   moveTo(144,339);
-  penRGB(randomNumber(130,140),randomNumber(150,180),0,1.0);
+  penRGB(130,180,0,1.0);
   turnTo(145);
   penWidth(10);
   arcLeft(30,180);
@@ -100,6 +119,13 @@ function drawPlanet() {
   arcLeft(30,178);
   penUp();
 }
+//draws second planet
+function drawPlanet2(){
+  moveTo(240,200);
+  penColor("#dd8888");
+  dot(33);
+}
+
 
 //Draw the Third Planet Type
 function drawPlanet3(size, red, green, blue) {
@@ -217,6 +243,7 @@ function drawRocketshipBody(Xlocation, Ylocation) {
   turnRight();
   penWidth(19);
   moveForward(80);
+  penUp();
 }
 
 //draws spaceship window
@@ -225,4 +252,38 @@ function drawWindow() {
   penRGB(0,0,255,0.2);
   dot(50);
   penUp();
+}
+//draws alien body
+function drawAlien(){
+   moveTo(160,270);
+   penColor("Green");
+  dot(20);
+  moveTo(160,235);
+  penColor("#00b33c");
+  dot(20);
+  moveTo(176.5,235);
+  turnRight(120);
+  penWidth(10);
+  penDown();
+  moveForward(30);
+  turnRight(110);
+  moveForward(20);
+  penUp();
+  
+}
+//draws the alien face
+function drawAlienFace(){
+   moveTo (150,235);
+  penColor("black");
+  dot(5);
+  moveTo(170,235);
+  dot(5);
+  moveTo(150,247);
+  penWidth(2);
+  penDown();
+  turnTo(180);
+  arcLeft(180,10);
+  penUp();
+  moveTo(160,242.5);
+  dot(1);
 }
