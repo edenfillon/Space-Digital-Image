@@ -8,7 +8,7 @@ drawMeteor();
 drawSun();
 drawAllSunrays();
 drawWindow();
-drawRocketshipBody(230, 278);
+drawRocketshipBody(230, 310);
 
 //make background
 function makeBackground() {
@@ -91,7 +91,7 @@ function drawPlanet() {
   penRGB(150,150,0,1.0);
   dot(53);
   moveTo(144,339);
-  penRGB(130,180,0,1.0);
+  penRGB(randomNumber(130,140),randomNumber(150,180),0,1.0);
   turnTo(145);
   penWidth(10);
   arcLeft(30,180);
