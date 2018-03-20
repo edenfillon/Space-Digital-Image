@@ -2,9 +2,10 @@
 Our Group Project
 
 //calls for functions
+hide();
 makeBackground();
 drawAllStars(10);
-drawallStars2();
+drawAllStars2(5);
 drawAllStars3();
 drawAllPlanets();
 drawMeteor();
@@ -247,11 +248,12 @@ function drawRocketshipBody(Xlocation, Ylocation) {
   turnRight();
   penWidth(19);
   moveForward(80);
+  penUp();
 }
 
 //draws spaceship window
 function drawWindow() {
-  moveTo(160,240);
+  moveTo(160,250);
   penRGB(0,0,255,0.2);
   dot(50);
   penUp();
