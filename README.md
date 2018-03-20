@@ -4,6 +4,7 @@ Our Group Project
 //calls for functions
 makeBackground();
 drawAllStars(10);
+drawallStars2();
 drawAllStars3();
 drawAllPlanets();
 drawMeteor();
@@ -11,7 +12,7 @@ drawSun();
 drawAllSunrays();
 drawAlien();
 drawWindow();
-drawRocketshipBody(230, 278);
+drawRocketshipBody(230, 310);
 drawAlienFace();
 
 //make background
