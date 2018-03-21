@@ -1,5 +1,6 @@
 # Space-Digital-Image
 Our Group Project
+
 //calls for functions
 makeBackground();
 drawAllStars(10);
@@ -29,7 +30,7 @@ function drawAllPlanets() {
   drawPlanet3(60, 65, 0, 20);
 }
 
-// draws all of the diamond stars
+// draws all of the diamond stars, Eden
 function drawAllStars(amount) {
   for (var i = 0; i < amount; i++) {
     penUp();
@@ -50,7 +51,7 @@ penUp();
  }
 } 
 
-//Draw one snowflake-type star
+//Draw one snowflake-type star, Tara
 function drawStar3(size) {
   penDown();
   penWidth(1);
@@ -71,7 +72,8 @@ function drawStar3(size) {
   }
   penUp();
 }
-//Draws Cris Crossy Star
+
+//Draws Cris Crossy Star, Skylla
 function drawStar2(size){
   penRGB(randomNumber(204,255),randomNumber(153,255),randomNumber(0,255),1);
   for(var i = 0; i < 5; i++){
@@ -80,7 +82,8 @@ function drawStar2(size){
   }
   turnTo(90);
 }
-// draws a singular diamond star
+
+// draws a singular diamond star, Eden
 function drawStar1(size) {
   penRGB(randomNumber(204,255),randomNumber(153,255),randomNumber(0,255));
   turnTo(45);
@@ -93,7 +96,7 @@ function drawStar1(size) {
   drawStarSide(size);
 }
 
-//draw all the snowflake-type stars
+//draw all the snowflake-type stars, Tara
 function drawAllStars3() {
   for (var i = 0; i < 20; i++) {
     moveTo(randomNumber(0, 320), randomNumber(0, 450));
@@ -101,13 +104,13 @@ function drawAllStars3() {
   }
 }
 
-// draws side of diamond star
+// draws side of diamond star, Eden
 function drawStarSide(size) {
   penWidth(2);
   arcLeft(size,size);
 }
 
-// draws first planet
+// draws first planet, Eden
 function drawPlanet() {
   penUp();
   moveTo(170,380);
@@ -124,7 +127,8 @@ function drawPlanet() {
   arcLeft(30,178);
   penUp();
 }
-//draws second planet
+
+//draws second planet, Skylla
 function drawPlanet2(){
   moveTo(240,200);
   penColor("#dd8888");
@@ -132,7 +136,7 @@ function drawPlanet2(){
 }
 
 
-//Draw the Third Planet Type
+//Draw the Third Planet Type, Tara
 function drawPlanet3(size, red, green, blue) {
   moveTo(4, 231);
  penDown();
@@ -145,7 +149,7 @@ function drawPlanet3(size, red, green, blue) {
  penUp();
 } 
 
-//draw a meteor
+//draw a meteor, Tara
 function drawMeteor() {
   moveTo(260, 60);
   penDown();
@@ -180,7 +184,7 @@ for (var i = 0; i < 2; i++) {
   penUp();
 }
 
-// draws sun
+// draws sun, Eden
 function drawSun() {
   penUp();
   moveTo(10,15);
@@ -190,7 +194,7 @@ function drawSun() {
   drawAllSunrays();
 }
 
-// draws the rays of the sun
+// draws the rays of the sun, Eden
 function drawAllSunrays() {
   turnTo(0);
   penWidth(2);
@@ -212,7 +216,7 @@ function drawAllSunrays() {
   penUp();
 }
 
-//draws the Rocketship Body
+//draws the Rocketship Body, Tara
 function drawRocketshipBody(Xlocation, Ylocation) {
   moveTo(Xlocation, Ylocation);
   turnTo(-30);
@@ -251,14 +255,14 @@ function drawRocketshipBody(Xlocation, Ylocation) {
   penUp();
 }
 
-//draws spaceship window
+//draws spaceship window, Eden
 function drawWindow() {
   moveTo(160,240);
   penRGB(0,0,255,0.2);
   dot(50);
   penUp();
 }
-//draws alien body
+//draws alien body, Skylla
 function drawAlien(){
    moveTo(160,270);
    penColor("Green");
@@ -276,7 +280,7 @@ function drawAlien(){
   penUp();
   
 }
-//draws the alien face
+//draws the alien face, Skylla
 function drawAlienFace(){
    moveTo (150,235);
   penColor("black");
