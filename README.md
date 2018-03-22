@@ -1,7 +1,7 @@
 # Space-Digital-Image
 Our Group Project
 
-//calls for functions
+//calls for functions by all
 makeBackground();
 drawAllStars(10);
 drawAllStars2();
@@ -17,17 +17,25 @@ drawRocketshipBody(230, 310);
 drawAlienFace();
 hide(); 
 
-//make background
+//make background by Eden
 function makeBackground() {
   penColor("#001133");
   dot(2400);
   penUp();
 }
 
+//draw all the planets at once by Eden
 function drawAllPlanets() {
   drawPlanet();
   drawPlanet2();
   drawPlanet3(60, 65, 0, 20);
+}
+
+//draw all the Stars at once by Tara
+function drawAllStars() {
+drawAllStars();
+drawAllStars2();
+drawAllStars3();
 }
 
 // draws all of the diamond stars, Eden
@@ -41,6 +49,7 @@ function drawAllStars(amount) {
   }
 }
 
+//draws all the Criss Cross Stars by Skylla
 function drawAllStars2 (){
 for(var i = 0; i < randomNumber(5,15); i++){
   penUp();
@@ -51,7 +60,7 @@ penUp();
  }
 } 
 
-//Draw one snowflake-type star, Tara
+//Draw one snowflake-type star, by Tara
 function drawStar3(size) {
   penDown();
   penWidth(1);
